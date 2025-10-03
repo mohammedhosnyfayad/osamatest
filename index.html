@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="logos">
+      <div class="container">
+        <div
+          class="box-img d-flex flex-row justify-content-between align-items-center gap-3 p-3"
+        >
+          <img width="100" src="big.jpeg" alt="Logo 1" />
+          <img width="100" src="city.jpeg" alt="Logo 2" />
+          <img width="100" src="big.jpeg" alt="Logo 3" />
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <div class="container">
+        <div class="box-text text-center p-5">
+          <h3 class="lh-lg">
+            مجمع الاسكواش والمنازلات <br />
+            <span>بالمدينه الرياضيه ببورسعيد</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="servises">
+      <div class="container">
+        <div class="title text-center p-5 mt-5">
+          <h1>جميع الالعاب الرياضيه</h1>
+        </div>
+        <div class="box-se"></div>
+      </div>
+    </div>
+    <div class="sport">
+      <div class="container text-center">
+        <div class="row mt-5 justify-content-center g-3">
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="1">الاسكواش</div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="2">كرة السلة</div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="4">كارتيه</div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="5">ملاكمة</div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="6">تايكوندو</div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="7">
+              كونغ فو وكيك بوكس
+            </div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="8">كرة طائره</div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="9">كرة يد</div>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <div class="part" style="width: 230px" data-id="10">
+              كرة السلة (بنات)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="test">
+      <div class="container">
+        <div class="box-test">
+          <img id="primeImg" src="" alt="" />
+          <h1></h1>
+          <table class="table">
+            <tr class="tr-table">
+              <th>اسم المدرب</th>
+              <th>ايام التدريب</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let data = [
+        {
+          id: 1,
+          title: "الاسكواش",
+          sportname: [
+            {
+              mangername: "اسامه سامي احمد",
+              time: "طوال ايام الاسبوع من الساعه 12 ظ الي 7 مساءا",
+            },
+            {
+              mangername: "ياسر صالح",
+              time: "طوال ايام الاسبوع من الساعه 2 الي 7 مساءا",
+            },
+            {
+              mangername: "احمد تابعي",
+              time: "الاحد - الاربعاء من الساعه 7 م الي 9 م",
+            },
+          ],
+        },
+        {
+          id: 2,
+          title: "كرة السلة",
+          sportname: [
+            {
+              mangername: "رامي حجازي",
+              time: "السبت - الاتنين - الاربعاء الساعه 9 مساءا ",
+            },
+            {
+              mangername: "احمد عبد العزيز",
+              time: "الاحد - الثلاثاء - الخميس الساعه 5 مساءا",
+            },
+          ],
+        },
+        {
+          id: 4,
+          title: "كارتيه ",
+          sportname: [
+            {
+              mangername: "احمد جلال الحفناوي",
+              time: "السبت - الاتنين - الاربعاء الساعه 7:30  مساءا ",
+            },
+            {
+              mangername: "خالد الرداد",
+              time: " الاتنين - الجمعه الساعه 6  مساءا ",
+            },
+          ],
+        },
+        {
+          id: 5,
+          title: "ملاكمة",
+          sportname: [
+            {
+              mangername: "فرغلي عبد القادر",
+              time: "السبت - الاتنين - الاربعاء الساعه 9 مساءا ",
+            },
+          ],
+        },
+        {
+          id: 6,
+          title: "تايكوندو",
+          sportname: [
+            {
+              mangername: "احمد متولي محمود",
+              time: "السبت - الاتنين - الاربعاء الساعه 5:30 مساءا ",
+            },
+          ],
+        },
+        {
+          id: 7,
+          title: " كونغ فو وكيك بوكس",
+          sportname: [
+            {
+              mangername: "عمرو ابراهيم عبد الروؤف",
+              time: "السبت - الاتنين - الاربعاء الساعه 5:30 مساءا ",
+            },
+            {
+              mangername: "محمد الشربيني",
+              time: "الاحد - الثلاثاء - الخميس الساعه 7:30 مساءا",
+            },
+          ],
+        },
+        {
+          id: 8,
+          title: "كرة طائره",
+          sportname: [
+            {
+              mangername: "احمد الحضري",
+              time: "الثلاثاء - الخميس - الجمعه الساعه 9 مساءا",
+            },
+            {
+              mangername: "ابرهيم فوزي",
+              time: "الاحد الساعه 9 مساءا - الاربعاء الساعه 5 مساءا - الجمعه الساعه 7 مساءا",
+            },
+          ],
+        },
+        {
+          id: 9,
+          title: "كرة اليد",
+          sportname: [
+            {
+              mangername: "محمد عبدالحميد",
+              time: " السبت - الاتنين - الاربعاء الساعه 9 مساءا (بنات)",
+            },
+            {
+              mangername: "ناصر",
+              time: "من الساعه 8 مساءا (اولاد)",
+            },
+          ],
+        },
+        {
+          id: 10,
+          title: "كرة السلة (بنات)",
+          sportname: [
+            {
+              mangername: "دينا فياض",
+              time: "الاحد - الثلاثاء - الخميس الساعه 9 مساءا",
+            },
+            {
+              mangername: "شيماء عرفه",
+              time: "الاحد - الثلاثاء - الخميس الساعه 9 مساءا",
+            },
+          ],
+        },
+      ];
+
+      let part = document.querySelectorAll(".part");
+      let trTable = document.querySelector(".tr-table");
+      let table = document.querySelector(".table");
+      let primeImg = document.getElementById("primeImg");
+      let tbody = document.getElementById("tbody");
+      table.style.visibility = "hidden";
+      part.forEach((e) => {
+        e.addEventListener("click", function () {
+          let idelement = e.getAttribute("data-id");
+          let m = data.find((item) => item.id == idelement);
+
+          if (m) {
+            let boxTest = document.querySelector(".box-test");
+            let one = boxTest.querySelector("h1");
+            one.textContent = m.title;
+
+            table.style.visibility = "visible";
+
+            // تمسح الجدول القديم
+            tbody.innerHTML = "";
+
+            // تعويض البيانات في الجدول
+            m.sportname.forEach((f) => {
+              let element = document.createElement("tr");
+              element.innerHTML = `
+          <td>${f.mangername}</td>
+          <td>${f.time}</td>
+        `;
+              tbody.appendChild(element);
+            });
+
+            // تعيين مصدر الصورة
+            primeImg.src = "req.jpeg";
+
+            // تحريك الصورة لتكون آخر عنصر تحت الجدول
+            boxTest.appendChild(primeImg);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
