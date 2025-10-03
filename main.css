@@ -3,11 +3,9 @@ body {
   font-family: "Alexandria", sans-serif !important;
 }
 .box-text {
-  background-color: #1c1c1c;
   border: 1px solid #dee2e6;
   border-radius: 0.375rem;
   padding: 1.5rem;
-  color: white;
   border-radius: 30px;
 }
 .title {
@@ -69,4 +67,21 @@ table tbody tr:hover {
 .test {
   margin-top: 40px;
   padding: 30px;
+}
+/* الخط الافتراضي */
+.text-font {
+  font-size: 24px; /* ممكن تعدل على حسب الحجم اللي تحبه */
+}
+.box-img img {
+  border-radius: 50px;
+}
+/* على شاشات الموبايل */
+@media (max-width: 767px) {
+  .text-font {
+    font-size: 16px; /* أصغر خط على الموبايل */
+  }
+  .text-font-plus {
+    font-size: 22px;
+    color: red;
+  }
 }
